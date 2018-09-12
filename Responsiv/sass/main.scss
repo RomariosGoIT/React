@@ -1,0 +1,286 @@
+@import 'smart-grid';
+@include reset();
+
+body {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div,
+p,
+input,
+form,
+button,
+span,
+a {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #323232;
+}
+
+p {
+    color: #8b8b8b;
+    line-height: 1.6em;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.header {
+    background: url('../img/first-bg.jpg') no-repeat center top;
+    padding-bottom: 203px;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.row {
+    @include row-flex();
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.container {
+    @include wrapper();
+}
+
+.logo {
+    @include col();
+    @include size(2);
+    display: block;
+    width: 147px;
+}
+
+.hamburger {
+    @include col();
+    @include size(1);
+    width: 24px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.offer {
+    margin-top: 170px;
+
+    &__title {
+        font-size: 52px;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;
+
+        @include sm(font-size, 40px);
+        @include xs(font-size, 25px);
+    }
+}
+
+.offer__form {
+    display: flex;
+    margin-top: 24px;
+    @include xs(flex-direction, column);
+
+    & input {
+        background: #fff;
+        border: 0;
+        width: 328px;
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+
+        @include xs(width, auto);
+    }
+
+    & button {
+        background: #fd4d32;
+        color: #fff;
+        padding: 10px 0;
+        text-transform: uppercase;
+        width: 127px;
+        cursor: pointer;
+        border: 0;
+        display: block;
+        font-size: 16px;
+        @include xs(width, auto);
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+}
+
+form input {
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.destination {
+    background: #eeeeee;
+    padding: 58px 0 69px 0;
+}
+
+.section-title {
+    @include col();
+    @include size(12);
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: #8b8b8b;
+    }
+}
+
+.route {
+    @include col();
+    @include size(3);
+    @include size-sm(6);
+    @include size-xs(12);
+    background: #fff;
+    border-bottom: 2px solid #e1e0d8;
+    margin-top: 35px;
+
+    
+
+    &__photo {
+        position: relative;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__price {
+        position: absolute;
+        font-size: 13px;
+        color: #fff;
+        right: 20px;
+        bottom: 14px;
+    }
+
+    &__title {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: 700;
+    }
+
+    &__descr {
+        font-size: 13px;
+        margin-top: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.details {
+    margin-top: 75px;
+}
+
+.section-title__bigger {
+    @include col();
+    @include size(12);  
+
+    text-transform: none;
+    font-weight: 300;
+    font-size: 52px;
+}
+
+.detail {
+    @include col();
+    @include size(4);
+    @include size-sm(6);
+    @include size-xs(12);
+
+    margin-top: 45px;
+    margin-bottom: 80px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 15px;
+    }
+}
+
+.footer {
+    background: #eeeeee;
+    padding: 24px 0;
+}
+
+.footer .container > .row {
+    @include xs(flex-direction, column);
+}
+
+.credits {
+    @include col();
+    @include size(6);    
+    @include size-xs(12);
+    @include xs(text-align, center);
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.menu {
+    @include col();
+    @include size(4);
+    @include size-xs(12);
+    @include xs(flex-direction, column);
+    @include xs(margin-top, 15px);
+
+    justify-content: flex-end;
+    &__item {
+        margin-left: 19px;
+        @include xs(text-align, center);
+        @include xs(margin-bottom, 15px);
+        @include xs(margin-left, 0);
+        & a {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #323232;
+        }
+    }
+}
+
+//@include
