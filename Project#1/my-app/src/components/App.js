@@ -7,7 +7,7 @@ function App () {
     return (
         <div className='container'>
         <div className='jumbotron'>
-        <h1 className='display-3'>My new React</h1>
+        <h1 className='display-3' style={{textAlign: 'center'}}>My new React List</h1>
         </div>            
             <ArticleList articles = {articles}/>
         </div>
