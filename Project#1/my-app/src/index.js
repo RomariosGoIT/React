@@ -1,8 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {render} from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+function HelloWorld () {
+    return (
+        <div>
+            <h1>
+                Hello World
+            </h1>
+        </div>
+    )   
+}
+
+
+function Article () {
+
+    return (
+        <div>
+            <h2>Title</h2>
+            <section>body</section>
+        </div>
+    )
+}
+
+render(<HelloWorld/>, document.querySelector('#root'))
