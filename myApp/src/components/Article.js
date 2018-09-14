@@ -1,9 +1,29 @@
 import React, {Component} from 'react';
 
 class Article extends Component {
-    state = {
-            isOpen: false,
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isOpen: props.defaultOpen,
         }
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.state.isOpen !== nextState.isOpen
+    }
+
+    componentWillReceiveProps(nextProps) {
+        // console.log('will recive props')
+        if(nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
+            isOpen: nextProps.defaultOpen,
+        })
+    }
+    
+    componentWillUpdate() {
+        console.log('will update')
+    }
 
     render () {
         const {article} = this.props;
