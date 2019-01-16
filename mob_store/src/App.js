@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import { Switch, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Details from './components/Details';
+import Cart from './components/Cart';
+import Footer from './components/Footer';
+import Default from './components/Default';
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="col-1">Column number one</div>
-        <div className="col-2">
-          <span>
-            <i className="fas fa-home" />
-          </span>
+      <React.Fragment>
+        <div className="container">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={ProductList} />
+            <Route path="/details" component={Details} />
+            <Route path="/cart" component={Cart} />
+            <Route component={Default} />
+          </Switch>
+          <Footer />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
