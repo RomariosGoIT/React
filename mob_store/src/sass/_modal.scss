@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(#000, 0.2);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 1fr max-content 1fr;
+  justify-content: center;
+
+  &__product {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(6, max-content);
+    grid-row-gap: 0.5rem;
+    justify-items: center;
+    background-color: var(--mainWhite);
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 5rem rgba(#000, 0.2);
+    font-size: 1.4rem;
+
+    &-title {
+      grid-row: 1 / 2;
+    }
+
+    &-image {
+      grid-row: 2 / 3;
+      &-img {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    &-name {
+      grid-row: 3 / 4;
+    }
+
+    &-price {
+      grid-row: 4 / 5;
+      font-size: 1.5rem;
+      color: var(--mainBlue);
+    }
+
+    .back-btn {
+      grid-row: 5 / 6;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .cart-btn {
+      grid-row: 6 / -1;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}

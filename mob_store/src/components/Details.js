@@ -46,15 +46,16 @@ export default class Deteils extends Component {
                     <p className="product-info__dscr-info--text">{info}</p>
                     <div className="product-info__dscr-buttons">
                       <Link to="/" className="product-info__dscr-link">
-                        <button className="product-info__dscr-back-btn button">
+                        <button className="button back-btn ">
                           Back to products
                         </button>
                       </Link>
                       <button
-                        className="product-info__dscr-cart-btn button"
+                        className="button cart-btn"
                         disabled={inCart ? true : false}
                         onClick={() => {
                           value.addToCart(id);
+                          value.openModal(id);
                         }}>
                         {inCart ? 'in cart' : 'add to cart'}
                       </button>

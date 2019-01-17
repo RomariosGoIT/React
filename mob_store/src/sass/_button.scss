@@ -12,3 +12,28 @@
     outline: none;
   }
 }
+
+.back-btn {
+  border: 1px solid var(--lightBlue);
+  border-radius: 0.5rem;
+  margin: 0 1rem;
+  color: var(--lightBlue);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--mainWhite);
+    background-color: var(--lightBlue);
+  }
+}
+
+.cart-btn {
+  border: 1px solid var(--mainYellow);
+  border-radius: 0.5rem;
+  color: var(--mainYellow);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--mainWhite);
+    background-color: var(--mainYellow);
+  }
+}
