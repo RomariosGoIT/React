@@ -1,0 +1,14 @@
+.button {
+  //   border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:focus,
+  &:active {
+    overflow: hidden;
+    outline: none;
+  }
+}
