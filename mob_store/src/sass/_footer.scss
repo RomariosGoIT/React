@@ -1,5 +1,5 @@
 .footer {
-  grid-row: 3 / -1;
+  grid-row: footer-start / footer-end;
   background-color: var(--mainBlue);
   color: var(--mainWhite);
   display: grid;

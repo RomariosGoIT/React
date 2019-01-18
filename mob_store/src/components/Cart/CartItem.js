@@ -18,14 +18,28 @@ const CartItem = ({ item, value }) => {
       <div className="cart__product-item-price">
         <p>{price}$</p>
       </div>
-      <div className="cart__product-item-quantiti">
+      <div className="cart__product-item-quantity">
+        <button
+          className="cart__product-item-btn"
+          onClick={() => decrement(id)}>
+          -
+        </button>
         <p>{count}</p>
+        <button
+          className="cart__product-item-btn"
+          onClick={() => increment(id)}>
+          +
+        </button>
       </div>
       <div className="cart__product-item-remove">
-        <p>remove</p>
+        <button
+          onClick={() => removeItem(id)}
+          className="cart__product-item-remove-icon">
+          <i className="fas fa-trash" />
+        </button>
       </div>
       <div className="cart__product-item-total">
-        <p>{total}</p>
+        <strong>Item total: {total}$</strong>
       </div>
     </div>
   );

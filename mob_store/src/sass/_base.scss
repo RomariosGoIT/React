@@ -20,19 +20,22 @@ html {
 }
 
 .container {
+  height: 100vh;
   display: grid;
-  grid-template-rows: max-content max-content minmax(8rem, max-content);
-  // grid-template-columns:
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    [header-start] max-content [header-end] 2rem [main-content-start] max-content [main-content-end block-start] 1fr [block-end footer-start] minmax(
+      8rem,
+      max-content
+    )
+    [footer-end];
 }
-
 .text-title {
   text-transform: uppercase;
 }
-
 .text-blue {
   color: var(--mainBlue);
 }
-
 .text-bright {
   color: var(--lightBlue);
 }
