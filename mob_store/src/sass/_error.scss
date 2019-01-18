@@ -1,0 +1,8 @@
+.error {
+  grid-column: content-start / content-end;
+  font-size: 2rem;
+  &__url {
+    color: red;
+    font-family: 600;
+  }
+}

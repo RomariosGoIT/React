@@ -6,7 +6,11 @@
 
   &__title {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(16rem, max-content));
+    background-color: #ddd;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    flex-wrap: nowrap;
     &-text {
       text-transform: uppercase;
       font-size: 1.4rem;
@@ -80,6 +84,17 @@
           outline: none;
         }
       }
+    }
+  }
+
+  &__totals {
+    display: grid;
+    justify-items: end;
+    grid-row-gap: 1rem;
+    padding-right: 2.5rem;
+    span {
+      font-size: 1.4rem;
+      font-weight: 600;
     }
   }
 }

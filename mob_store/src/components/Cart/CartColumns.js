@@ -7,7 +7,7 @@ export default function CartColumns() {
         <p className="cart__title-text">Products</p>
       </div>
       <div className="cart__name">
-        <p className="cart__title-text">Name of product</p>
+        <p className="cart__title-text">Name</p>
       </div>
       <div className="cart__price">
         <p className="cart__title-text">Price</p>
