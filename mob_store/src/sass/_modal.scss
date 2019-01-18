@@ -22,6 +22,8 @@
     overflow: hidden;
     box-shadow: 0 2rem 5rem rgba(#000, 0.2);
     font-size: 1.4rem;
+    width: 80%;
+    margin: 0 auto;
 
     &-title {
       grid-row: 1 / 2;
